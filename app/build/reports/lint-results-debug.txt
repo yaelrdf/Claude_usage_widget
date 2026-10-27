@@ -1,0 +1,175 @@
+/home/yaelrdf/Claude-widget/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.8.1 is available: 9.8.2 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.8.1-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/home/yaelrdf/Claude-widget/gradle/libs.versions.toml:11: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.11.0 is available: 1.12.0 [NewerVersionAvailable]
+serializationJson = "1.11.0"
+                    ~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:8: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+        android:allowBackup="false"
+                             ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+/home/yaelrdf/Claude-widget/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/yaelrdf/Claude-widget/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   The system may use the coloring of the user's chosen wallpaper and theme to
+   tint app icons. Providing a <monochrome> layer (which will be used for
+   tinting) for every adaptive icon is strongly recommended, otherwise Android
+   16 QPR 2 and above will simply tint the color version of the icon, which
+   may look unusual. Devices running earlier Android versions will (with no
+   monochrome layer) show the untinted color icon for your app, which will
+   look inconsistent.
+
+/home/yaelrdf/Claude-widget/app/src/main/java/dev/yaelrdf/claudewidget/data/ClaudeApi.kt:54: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val url = Uri.parse(AUTHORIZE_URL).buildUpon()
+                  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/home/yaelrdf/Claude-widget/app/src/main/java/dev/yaelrdf/claudewidget/format/Format.kt:10: Warning: Assigning Locale.getDefault() to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running [ConstantLocale]
+    private val dayTime = DateTimeFormatter.ofPattern("EEE HH:mm", Locale.getDefault())
+                                                                   ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ConstantLocale":
+   Assigning Locale.getDefault() to a constant is suspicious, because the
+   locale can change while the app is running.
+
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_loading.xml:7: Warning: Hardcoded string "Claude…", should use @string resource [HardcodedText]
+    android:text="Claude…"
+    ~~~~~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:16: Warning: Hardcoded string "Session", should use @string resource [HardcodedText]
+            android:text="Session" android:textColor="#EDEAE3" android:textSize="9sp" />
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:23: Warning: Hardcoded string "42%", should use @string resource [HardcodedText]
+                android:gravity="end" android:text="42%" android:textColor="#EDEAE3"
+                                      ~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:27: Warning: Hardcoded string "2h 13m", should use @string resource [HardcodedText]
+            android:text="2h 13m" android:textColor="#A19D94" android:textSize="8sp" />
+            ~~~~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:31: Warning: Hardcoded string "Weekly", should use @string resource [HardcodedText]
+            android:text="Weekly" android:textColor="#EDEAE3" android:textSize="9sp" />
+            ~~~~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:38: Warning: Hardcoded string "18%", should use @string resource [HardcodedText]
+                android:gravity="end" android:text="18%" android:textColor="#EDEAE3"
+                                      ~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:42: Warning: Hardcoded string "Thu 09:00", should use @string resource [HardcodedText]
+            android:text="Thu 09:00" android:textColor="#A19D94" android:textSize="8sp" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yaelrdf/Claude-widget/app/src/main/res/layout/widget_preview.xml:47: Warning: Hardcoded string "4m ↻", should use @string resource [HardcodedText]
+        android:text="4m ↻" android:textColor="#EDEAE3" android:textSize="9sp" />
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 15 warnings

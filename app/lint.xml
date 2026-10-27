@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- The 1-row widget layout needs 8–9sp text to fit three lines per limit (docs/widget-layouts.md). -->
+    <issue id="SmallSp" severity="ignore" />
+    <!-- targetCell*/maxResize*/previewLayout are API 31+ widget attributes; older launchers ignore them
+         and use minWidth/minHeight instead, which is intended. -->
+    <issue id="UnusedAttribute" severity="ignore" />
+</lint>

@@ -1,0 +1,353 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dev.yaelrdf.claudewidget"
+4    android:versionCode="2"
+5    android:versionName="1.2.0" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="26"
+8-->INJECTED
+9        android:targetSdkVersion="37" />
+9-->INJECTED
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:4:5-67
+11-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:5:5-79
+12-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:23:5-68
+13-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:23:22-65
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:25:5-81
+14-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:25:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:26:5-77
+15-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:26:22-74
+16
+17    <permission
+17-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:22:5-24:47
+18        android:name="dev.yaelrdf.claudewidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="dev.yaelrdf.claudewidget.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:7:5-35:19
+24        android:allowBackup="false"
+24-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:8:9-36
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.19.1] /home/yaelrdf/.gradle/caches/9.8.1/transforms/353ae23859622beb4eb1abdf633d615c/transformed/core-1.19.1/AndroidManifest.xml:28:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+27-->INJECTED
+28        android:icon="@mipmap/ic_launcher"
+28-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:9:9-43
+29        android:label="@string/app_name"
+29-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:10:9-41
+30        android:supportsRtl="true"
+30-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:11:9-35
+31        android:theme="@android:style/Theme.Material.NoActionBar" >
+31-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:12:9-66
+32        <activity
+32-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:14:9-22:20
+33            android:name="dev.yaelrdf.claudewidget.MainActivity"
+33-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:15:13-41
+34            android:exported="true"
+34-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:16:13-36
+35            android:launchMode="singleTop" >
+35-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:17:13-43
+36            <intent-filter>
+36-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:18:13-21:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:19:17-69
+37-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:19:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:20:17-77
+39-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:20:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <receiver
+43-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:24:9-34:20
+44            android:name="dev.yaelrdf.claudewidget.widget.UsageWidgetReceiver"
+44-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:25:13-55
+45            android:exported="true"
+45-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:26:13-36
+46            android:label="@string/widget_name" >
+46-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:27:13-48
+47            <intent-filter>
+47-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:28:13-30:29
+48                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+48-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:29:17-84
+48-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:29:25-81
+49            </intent-filter>
+50
+51            <meta-data
+51-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:31:13-33:61
+52                android:name="android.appwidget.provider"
+52-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:32:17-58
+53                android:resource="@xml/usage_widget_info" />
+53-->/home/yaelrdf/Claude-widget/app/src/main/AndroidManifest.xml:33:17-58
+54        </receiver>
+55        <!--
+56          Any addition to or deletion of the components below should also have a corresponding
+57          change to the GlanceComponents class, so that alternate subclasses of these components may
+58          be specified by Glance users. Please also add a release note so that users of the
+59          multiprocess library will know if they need to add another manifest entry.
+60        -->
+61        <activity
+61-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:31:9-36:62
+62            android:name="androidx.glance.appwidget.action.ActionTrampolineActivity"
+62-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:32:13-85
+63            android:enabled="true"
+63-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:33:13-35
+64            android:excludeFromRecents="true"
+64-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:34:13-46
+65            android:exported="false"
+65-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:35:13-37
+66            android:theme="@android:style/Theme.NoDisplay" />
+66-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:36:13-59
+67        <activity
+67-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:37:9-44:81
+68            android:name="androidx.glance.appwidget.action.InvisibleActionTrampolineActivity"
+68-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:38:13-94
+69            android:enabled="true"
+69-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:39:13-35
+70            android:exported="false"
+70-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:40:13-37
+71            android:launchMode="singleInstance"
+71-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:41:13-48
+72            android:noHistory="true"
+72-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:42:13-37
+73            android:taskAffinity="androidx.glance.appwidget.ListAdapterCallbackTrampoline"
+73-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:43:13-91
+74            android:theme="@style/Widget.Glance.AppWidget.CallbackTrampoline" />
+74-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:44:13-78
+75
+76        <receiver
+76-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:46:9-49:40
+77            android:name="androidx.glance.appwidget.action.ActionCallbackBroadcastReceiver"
+77-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:47:13-92
+78            android:enabled="true"
+78-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:48:13-35
+79            android:exported="false" />
+79-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:49:13-37
+80        <receiver
+80-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:50:9-53:40
+81            android:name="androidx.glance.appwidget.UnmanagedSessionReceiver"
+81-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:51:13-78
+82            android:enabled="true"
+82-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:52:13-35
+83            android:exported="false" />
+83-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:53:13-37
+84        <receiver
+84-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:54:9-61:20
+85            android:name="androidx.glance.appwidget.MyPackageReplacedReceiver"
+85-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:55:13-79
+86            android:enabled="true"
+86-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:56:13-35
+87            android:exported="false" >
+87-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:57:13-37
+88            <intent-filter>
+88-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:58:13-60:29
+89                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+89-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:59:17-84
+89-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:59:25-81
+90            </intent-filter>
+91        </receiver>
+92
+93        <service
+93-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:63:9-66:72
+94            android:name="androidx.glance.appwidget.GlanceRemoteViewsService"
+94-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:64:13-78
+95            android:exported="true"
+95-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:65:13-36
+96            android:permission="android.permission.BIND_REMOTEVIEWS" />
+96-->[androidx.glance:glance-appwidget:1.2.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/AndroidManifest.xml:66:13-69
+97        <service
+97-->[androidx.core:core-remoteviews:1.1.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/156aa6d967299b16d42c4955816005bc/transformed/core-remoteviews-1.1.0/AndroidManifest.xml:24:9-27:63
+98            android:name="androidx.core.widget.RemoteViewsCompatService"
+98-->[androidx.core:core-remoteviews:1.1.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/156aa6d967299b16d42c4955816005bc/transformed/core-remoteviews-1.1.0/AndroidManifest.xml:25:13-73
+99            android:permission="android.permission.BIND_REMOTEVIEWS" />
+99-->[androidx.core:core-remoteviews:1.1.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/156aa6d967299b16d42c4955816005bc/transformed/core-remoteviews-1.1.0/AndroidManifest.xml:26:13-69
+100
+101        <provider
+101-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:29:9-37:20
+102            android:name="androidx.startup.InitializationProvider"
+102-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:30:13-67
+103            android:authorities="dev.yaelrdf.claudewidget.androidx-startup"
+103-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:31:13-68
+104            android:exported="false" >
+104-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:32:13-37
+105            <meta-data
+105-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:34:13-36:52
+106                android:name="androidx.work.WorkManagerInitializer"
+106-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:35:17-68
+107                android:value="androidx.startup" />
+107-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:36:17-49
+108            <meta-data
+108-->[androidx.emoji2:emoji2:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/9c317d8c06b5f05e6275839901981e46/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+109                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+109-->[androidx.emoji2:emoji2:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/9c317d8c06b5f05e6275839901981e46/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+110                android:value="androidx.startup" />
+110-->[androidx.emoji2:emoji2:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/9c317d8c06b5f05e6275839901981e46/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+111            <meta-data
+111-->[androidx.lifecycle:lifecycle-process:2.10.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/abcaa803d39af58547d6ac66181550f1/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:29:13-31:52
+112                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+112-->[androidx.lifecycle:lifecycle-process:2.10.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/abcaa803d39af58547d6ac66181550f1/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:30:17-78
+113                android:value="androidx.startup" />
+113-->[androidx.lifecycle:lifecycle-process:2.10.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/abcaa803d39af58547d6ac66181550f1/transformed/lifecycle-process-2.10.0/AndroidManifest.xml:31:17-49
+114            <meta-data
+114-->[com.squareup.okhttp3:okhttp-android:5.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1301496e4060bd51640680878f1bf910/transformed/okhttp/AndroidManifest.xml:16:13-18:52
+115                android:name="okhttp3.internal.platform.PlatformInitializer"
+115-->[com.squareup.okhttp3:okhttp-android:5.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1301496e4060bd51640680878f1bf910/transformed/okhttp/AndroidManifest.xml:17:17-77
+116                android:value="androidx.startup" />
+116-->[com.squareup.okhttp3:okhttp-android:5.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1301496e4060bd51640680878f1bf910/transformed/okhttp/AndroidManifest.xml:18:17-49
+117            <meta-data
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+118-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+119                android:value="androidx.startup" />
+119-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+120        </provider>
+121
+122        <service
+122-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:39:9-45:35
+123            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+123-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:40:13-84
+124            android:directBootAware="false"
+124-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:41:13-44
+125            android:enabled="@bool/enable_system_job_service_default"
+125-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:42:13-70
+126            android:exported="true"
+126-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:43:13-36
+127            android:permission="android.permission.BIND_JOB_SERVICE" />
+127-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:44:13-69
+128        <service
+128-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:46:9-52:35
+129            android:name="androidx.work.impl.foreground.SystemForegroundService"
+129-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:47:13-81
+130            android:directBootAware="false"
+130-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:48:13-44
+131            android:enabled="@bool/enable_system_foreground_service_default"
+131-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:49:13-77
+132            android:exported="false" />
+132-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:50:13-37
+133
+134        <receiver
+134-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:54:9-59:35
+135            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+135-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:55:13-88
+136            android:directBootAware="false"
+136-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:56:13-44
+137            android:enabled="true"
+137-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:57:13-35
+138            android:exported="false" />
+138-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:58:13-37
+139        <receiver
+139-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:60:9-69:20
+140            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+140-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:61:13-88
+141            android:directBootAware="false"
+141-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:62:13-44
+142            android:enabled="false"
+142-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:63:13-36
+143            android:exported="false" >
+143-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:64:13-37
+144            <intent-filter>
+144-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:66:13-68:29
+145                <action android:name="android.intent.action.BOOT_COMPLETED" />
+145-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:67:17-79
+145-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:67:25-76
+146            </intent-filter>
+147        </receiver>
+148        <receiver
+148-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:70:9-80:20
+149            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+149-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:71:13-78
+150            android:directBootAware="false"
+150-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:72:13-44
+151            android:enabled="true"
+151-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:73:13-35
+152            android:exported="true"
+152-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:74:13-36
+153            android:permission="android.permission.DUMP" >
+153-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:75:13-57
+154            <intent-filter>
+154-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:77:13-79:29
+155                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+155-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:78:17-88
+155-->[androidx.work:work-runtime:2.12.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/be5c399b91b24c0f7659974331b6a16b/transformed/work-runtime-2.12.0/AndroidManifest.xml:78:25-85
+156            </intent-filter>
+157        </receiver>
+158
+159        <uses-library
+159-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:23:9-25:40
+160            android:name="androidx.window.extensions"
+160-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:24:13-54
+161            android:required="false" />
+161-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:25:13-37
+162        <uses-library
+162-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:26:9-28:40
+163            android:name="androidx.window.sidecar"
+163-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:27:13-51
+164            android:required="false" />
+164-->[androidx.window:window:1.5.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/1bd0434fd8d66bc17265843640e44fad/transformed/window-1.5.0/AndroidManifest.xml:28:13-37
+165
+166        <service
+166-->[androidx.room:room-runtime-android:2.7.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/aac04880f3fb49e45be030ef7c5250c4/transformed/room-runtime-release/AndroidManifest.xml:24:9-28:63
+167            android:name="androidx.room.MultiInstanceInvalidationService"
+167-->[androidx.room:room-runtime-android:2.7.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/aac04880f3fb49e45be030ef7c5250c4/transformed/room-runtime-release/AndroidManifest.xml:25:13-74
+168            android:directBootAware="true"
+168-->[androidx.room:room-runtime-android:2.7.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/aac04880f3fb49e45be030ef7c5250c4/transformed/room-runtime-release/AndroidManifest.xml:26:13-43
+169            android:exported="false" />
+169-->[androidx.room:room-runtime-android:2.7.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/aac04880f3fb49e45be030ef7c5250c4/transformed/room-runtime-release/AndroidManifest.xml:27:13-37
+170
+171        <receiver
+171-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+172            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+172-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+173            android:directBootAware="false"
+173-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+174            android:enabled="true"
+174-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+175            android:exported="true"
+175-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+176            android:permission="android.permission.DUMP" >
+176-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+177            <intent-filter>
+177-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+178                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+178-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+178-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+179            </intent-filter>
+180            <intent-filter>
+180-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+181                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+181-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+181-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+182            </intent-filter>
+183            <intent-filter>
+183-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+184                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+184-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+184-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+185            </intent-filter>
+186            <intent-filter>
+186-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+187                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+187-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+187-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/yaelrdf/.gradle/caches/9.8.1/transforms/a53e30ea19b8e83278375652c283ca1e/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+188            </intent-filter>
+189        </receiver>
+190    </application>
+191
+192</manifest>

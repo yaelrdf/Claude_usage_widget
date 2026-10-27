@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.yaelrdf.claudewidget.format.FormatTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-20T07:47:57.509Z" hostname="dev-services" time="0.28">
+  <properties/>
+  <testcase name="resets" classname="dev.yaelrdf.claudewidget.format.FormatTest" time="0.258"/>
+  <testcase name="agoShort" classname="dev.yaelrdf.claudewidget.format.FormatTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

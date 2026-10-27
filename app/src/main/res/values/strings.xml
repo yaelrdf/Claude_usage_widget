@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Claude Usage</string>
+    <string name="widget_name">Claude usage</string>
+    <string name="widget_description">Session and weekly Claude plan limits</string>
+</resources>

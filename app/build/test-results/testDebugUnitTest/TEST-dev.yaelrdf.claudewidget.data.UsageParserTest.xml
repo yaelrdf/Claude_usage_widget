@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.yaelrdf.claudewidget.data.UsageParserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-20T07:47:56.004Z" hostname="dev-services" time="1.464">
+  <properties/>
+  <testcase name="fallsBackToFlatKeys" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="1.245"/>
+  <testcase name="clampsOutOfRange" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="0.007"/>
+  <testcase name="parsesSampleResponse" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="0.1"/>
+  <testcase name="rejectsNonObject" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="0.004"/>
+  <testcase name="emptyLimitsFallsBackToFlat" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="0.01"/>
+  <testcase name="prefersLimitsArray" classname="dev.yaelrdf.claudewidget.data.UsageParserTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.4.1" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.intent.action.VIEW (used to start an activity)">
+                        <location id="0"
+                            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/dev/yaelrdf/claudewidget/MainActivity.kt"
+                            line="214"
+                            column="39"
+                            startOffset="9199"
+                            endLine="214"
+                            endColumn="84"
+                            endOffset="9244"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="dev.yaelrdf.claudewidget.MainActivity"
+                    boolean="true"/>
+                <entry
+                    name="dev.yaelrdf.claudewidget.widget.UsageWidgetReceiver"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="color[ic_launcher_background(U)],drawable[ic_launcher_foreground(U),widget_bg(U),widget_preview_image(U)],layout[widget_loading(U),widget_preview(U)],mipmap[ic_launcher(U)],string[app_name(U),widget_name(U),widget_description(U)],xml[usage_widget_info(U)];3^2^1,4^2,5^2,6^0^1,a^9^4^3^5;;;"/>
+    </map>
+
+</incidents>

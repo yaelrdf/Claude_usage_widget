@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.yaelrdf.claudewidget.app-mergeDebugResources-42:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "/home/yaelrdf/.gradle/caches/9.8.1/transforms/fc79a465c541ddd5d27bfdba5eb11c98/transformed/glance-appwidget-1.2.0/res/values-v29/values-v29.xml",
+                    "from": {
+                        "startLines": "2,5,19,22,25,26,27",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,244,1048,1239,1430,1519,1585",
+                        "endLines": "4,18,21,24,25,26,27",
+                        "endColumns": "12,12,12,12,88,65,65",
+                        "endOffsets": "239,1043,1234,1425,1514,1580,1646"
+                    }
+                }
+            ]
+        }
+    ]
+}

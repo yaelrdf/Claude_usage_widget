@@ -1,0 +1,8 @@
+dev.yaelrdf.claudewidget.app-pngs-0 /home/yaelrdf/Claude-widget/app/build/generated/res/pngs/release
+dev.yaelrdf.claudewidget.app-updated_navigation_xml-1 /home/yaelrdf/Claude-widget/app/build/generated/updated_navigation_xml/release
+dev.yaelrdf.claudewidget.app-packageReleaseResources-2 /home/yaelrdf/Claude-widget/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
+dev.yaelrdf.claudewidget.app-packageReleaseResources-3 /home/yaelrdf/Claude-widget/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
+dev.yaelrdf.claudewidget.app-release-4 /home/yaelrdf/Claude-widget/app/build/intermediates/merged_res/release/mergeReleaseResources
+dev.yaelrdf.claudewidget.app-main-5 /home/yaelrdf/Claude-widget/app/src/main/res
+dev.yaelrdf.claudewidget.app-release-6 /home/yaelrdf/Claude-widget/app/src/release/res
+gradleHome-0 /home/yaelrdf/.gradle

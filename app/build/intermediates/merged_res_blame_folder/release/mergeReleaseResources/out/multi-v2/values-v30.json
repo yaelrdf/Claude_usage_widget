@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "dev.yaelrdf.claudewidget.app-mergeReleaseResources-42:/values-v30/values-v30.xml",
+            "map": [
+                {
+                    "source": "/home/yaelrdf/.gradle/caches/9.8.1/transforms/d48dccc0893d26ebead57e692e7d6f73/transformed/material3/res/values-v30/values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/xml_usage_widget_info.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/xml/usage_widget_info.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/drawable_widget_preview_image.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/drawable/widget_preview_image.xml"
+    },
+    {
+        "merged": "dev.yaelrdf.claudewidget.app-release-44:/layout_widget_preview.xml.flat",
+        "source": "dev.yaelrdf.claudewidget.app-main-45:/layout/widget_preview.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/layout_widget_loading.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/layout/widget_loading.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/drawable_widget_bg.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/drawable/widget_bg.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/layout_widget_preview.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/layout/widget_preview.xml"
+    },
+    {
+        "merged": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-release-44:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/yaelrdf/.gradle/daemon/9.8.1/dev.yaelrdf.claudewidget.app-main-45:/drawable/ic_launcher_foreground.xml"
+    }
+]

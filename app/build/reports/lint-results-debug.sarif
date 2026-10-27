@@ -1,0 +1,883 @@
+{
+    "$schema" : "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+    "version" : "2.1.0",
+    "runs" : [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Android Lint",
+                    "fullName": "Android Lint (in gradle)",
+                    "version": "9.4.1",
+                    "semanticVersion": "9.4.1",
+                    "organization": "Google",
+                    "informationUri": "https://developer.android.com/studio/write/lint",
+                    "fullDescription": {
+                        "text": "Static analysis originally for Android source code but now performing general analysis"
+                    },
+                    "language": "en-US",
+                    "rules": [
+                        {
+                            "id": "AndroidGradlePluginVersion",
+                            "shortDescription": {
+                                "text": "Obsolete Android Gradle Plugin Version"
+                            },
+                            "fullDescription": {
+                                "text": "This detector looks for usage of the Android Gradle Plugin where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 70
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ConstantLocale",
+                            "shortDescription": {
+                                "text": "Constant Locale"
+                            },
+                            "fullDescription": {
+                                "text": "Assigning Locale.getDefault() to a constant is suspicious, because the locale can change while the app is running.",
+                                "markdown": "Assigning `Locale.getDefault()` to a constant is suspicious, because the locale can change while the app is running."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Internationalization"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "DataExtractionRules",
+                            "shortDescription": {
+                                "text": "Missing data extraction rules"
+                            },
+                            "fullDescription": {
+                                "text": "Before Android 12, the attributes android:allowBackup and android:fullBackupContent were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.\n\nIn Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute android:dataExtractionRules, specifying an @xml resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your minSdkVersion supports older versions, you'll still want to specify an android:fullBackupContent resource if the default behavior is not right for your app.",
+                                "markdown": "Before Android 12, the attributes `android:allowBackup` and `android:fullBackupContent` were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.\n\nIn Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute `android:dataExtractionRules`, specifying an `@xml` resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your `minSdkVersion` supports older versions, you'll still want to specify an `android:fullBackupContent` resource if the default behavior is not right for your app."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 80
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Security"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "HardcodedText",
+                            "shortDescription": {
+                                "text": "Hardcoded text"
+                            },
+                            "fullDescription": {
+                                "text": "Hardcoding text attributes directly in layout files is bad for several reasons:\n\n* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)\n\n* The application cannot be translated to other languages by just adding new translations for existing string resources.\n\nThere are quickfixes to automatically extract this hardcoded string into a resource lookup."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 60
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Internationalization"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "MonochromeLauncherIcon",
+                            "shortDescription": {
+                                "text": "Monochrome icon is not defined"
+                            },
+                            "fullDescription": {
+                                "text": "The system may use the coloring of the user's chosen wallpaper and theme to tint app icons. Providing a <monochrome> layer (which will be used for tinting) for every adaptive icon is strongly recommended, otherwise Android 16 QPR 2 and above will simply tint the color version of the icon, which may look unusual. Devices running earlier Android versions will (with no monochrome layer) show the untinted color icon for your app, which will look inconsistent.",
+                                "markdown": "The system may use the coloring of the user's chosen wallpaper and theme to tint app icons. Providing a `<monochrome>` layer (which will be used for tinting) for every adaptive icon is strongly recommended, otherwise Android 16 QPR 2 and above will simply tint the color version of the icon, which may look unusual. Devices running earlier Android versions will (with no monochrome layer) show the untinted color icon for your app, which will look inconsistent."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Icons",
+                                    "Usability"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "NewerVersionAvailable",
+                            "shortDescription": {
+                                "text": "Newer Library Versions Available"
+                            },
+                            "fullDescription": {
+                                "text": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the GradleDependency check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also much slower.",
+                                "markdown": "This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the `GradleDependency` check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also **much** slower."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 70
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Correctness"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ObsoleteSdkInt",
+                            "shortDescription": {
+                                "text": "Obsolete SDK_INT Version Check"
+                            },
+                            "fullDescription": {
+                                "text": "This check flags version checks that are not necessary, because the minSdkVersion (or surrounding known API level) is already at least as high as the version checked for.\n\nSimilarly, it also looks for resources in -vNN folders, such as values-v14 where the version qualifier is less than or equal to the minSdkVersion, where the contents should be merged into the best folder.",
+                                "markdown": "This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.\n\nSimilarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Performance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "UseKtx",
+                            "shortDescription": {
+                                "text": "Use KTX extension function"
+                            },
+                            "fullDescription": {
+                                "text": "The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+                            },
+                            "defaultConfiguration": {
+                                "level": "warning",
+                                "rank": 50
+                            },
+                            "properties": {
+                                "tags": [
+                                    "Productivity"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "originalUriBaseIds": {
+                "%SRCROOT%": {
+                    "uri": "file:///home/yaelrdf/Claude-widget/"
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "AndroidGradlePluginVersion",
+                    "ruleIndex": 0,
+                    "message": {
+                        "text": "A newer version of Gradle than 9.8.1 is available: 9.8.2"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "gradle/wrapper/gradle-wrapper.properties"
+                                },
+                                "region": {
+                                    "startLine": 3,
+                                    "startColumn": 17,
+                                    "endLine": 3,
+                                    "endColumn": 80,
+                                    "charOffset": 81,
+                                    "charLength": 63,
+                                    "snippet": {
+                                        "text": "https\\://services.gradle.org/distributions/gradle-9.8.1-bin.zip"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "text": "distributionBase=GRADLE_USER_HOME\ndistributionPath=wrapper/dists\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-9.8.1-bin.zip\nnetworkTimeout=10000\nretries=0\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Update to 9.8.2"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "gradle/wrapper/gradle-wrapper.properties"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 3,
+                                                "startColumn": 67,
+                                                "charOffset": 131,
+                                                "endLine": 3,
+                                                "endColumn": 72,
+                                                "charLength": 5
+                                            },
+                                            "insertedContent": {
+                                                "text": "9.8.2\n"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "efdb41669c933fea"
+                    }
+                },
+                {
+                    "ruleId": "NewerVersionAvailable",
+                    "ruleIndex": 5,
+                    "message": {
+                        "text": "A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.11.0 is available: 1.12.0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "gradle/libs.versions.toml"
+                                },
+                                "region": {
+                                    "startLine": 11,
+                                    "startColumn": 21,
+                                    "endLine": 11,
+                                    "endColumn": 29,
+                                    "charOffset": 205,
+                                    "charLength": 8,
+                                    "snippet": {
+                                        "text": "\"1.11.0\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 9,
+                                    "endLine": 14,
+                                    "snippet": {
+                                        "text": "datastore = \"1.2.1\"\nokhttp = \"5.5.0\"\nserializationJson = \"1.11.0\"\njunit = \"4.13.2\"\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Change to 1.12.0"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "gradle/libs.versions.toml"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 11,
+                                                "startColumn": 22,
+                                                "charOffset": 206,
+                                                "endLine": 11,
+                                                "endColumn": 28,
+                                                "charLength": 6
+                                            },
+                                            "insertedContent": {
+                                                "text": "1.12.0\n"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "c79594170c6492a5"
+                    }
+                },
+                {
+                    "ruleId": "DataExtractionRules",
+                    "ruleIndex": 2,
+                    "message": {
+                        "text": "The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher.",
+                        "markdown": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/AndroidManifest.xml"
+                                },
+                                "region": {
+                                    "startLine": 8,
+                                    "startColumn": 30,
+                                    "endLine": 8,
+                                    "endColumn": 35,
+                                    "charOffset": 303,
+                                    "charLength": 5,
+                                    "snippet": {
+                                        "text": "false"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 6,
+                                    "endLine": 11,
+                                    "snippet": {
+                                        "text": "\n    <application\n        android:allowBackup=\"false\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Create data_extraction_rules.xml"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/res/xml/data_extraction_rules.xml"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 1,
+                                                "startColumn": 1,
+                                                "charOffset": 0
+                                            },
+                                            "insertedContent": {
+                                                "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!--\n   Sample data extraction rules file; uncomment and customize as necessary.\n   See https://developer.android.com/about/versions/12/backup-restore#xml-changes\n   for details.\n-->\n<data-extraction-rules>\n    <cloud-backup>\n        <!--\n        TODO: Use <include> and <exclude> to control what is backed up.\n        The domain can be file, database, sharedpref, external or root.\n        Examples:\n\n        <include domain=\"file\" path=\"file_to_include\"/>\n        <exclude domain=\"file\" path=\"file_to_exclude\"/>\n        <include domain=\"file\" path=\"include_folder\"/>\n        <exclude domain=\"file\" path=\"include_folder/file_to_exclude\"/>\n        <exclude domain=\"file\" path=\"exclude_folder\"/>\n        <include domain=\"file\" path=\"exclude_folder/file_to_include\"/>\n\n        <include domain=\"sharedpref\" path=\"include_shared_pref1.xml\"/>\n        <include domain=\"database\" path=\"db_name/file_to_include\"/>\n        <exclude domain=\"database\" path=\"db_name/include_folder/file_to_exclude\"/>\n        <include domain=\"external\" path=\"file_to_include\"/>\n        <exclude domain=\"external\" path=\"file_to_exclude\"/>\n        <include domain=\"root\" path=\"file_to_include\"/>\n        <exclude domain=\"root\" path=\"file_to_exclude\"/>\n        -->\n    </cloud-backup>\n    <!--\n    <device-transfer>\n        <include .../>\n        <exclude .../>\n    </device-transfer>\n    -->\n</data-extraction-rules>\n"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/AndroidManifest.xml"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 9,
+                                                "startColumn": 9,
+                                                "charOffset": 318
+                                            },
+                                            "insertedContent": {
+                                                "text": "android:dataExtractionRules=\"@xml/data_extraction_rules\" \n"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "19f0e7e7bb48c0b1"
+                    }
+                },
+                {
+                    "ruleId": "ObsoleteSdkInt",
+                    "ruleIndex": 6,
+                    "message": {
+                        "text": "This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi.",
+                        "markdown": "This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`."
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-anydpi-v26"
+                                },
+                                "region": {
+                                    "startLine": 1
+                                }                            }
+                        }
+                    ],
+                    "fixes": [
+                    ],
+                    "partialFingerprints": {
+                    }
+                },
+                {
+                    "ruleId": "MonochromeLauncherIcon",
+                    "ruleIndex": 4,
+                    "message": {
+                        "text": "The application adaptive icon is missing a monochrome tag"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+                                },
+                                "region": {
+                                    "startLine": 2,
+                                    "startColumn": 1,
+                                    "endLine": 5,
+                                    "endColumn": 17,
+                                    "charOffset": 39,
+                                    "charLength": 230,
+                                    "snippet": {
+                                        "text": "<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\n    <background android:drawable=\"@color/ic_launcher_background\" />\n    <foreground android:drawable=\"@drawable/ic_launcher_foreground\" />\n</adaptive-icon>"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 1,
+                                    "endLine": 6,
+                                    "snippet": {
+                                        "text": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\n    <background android:drawable=\"@color/ic_launcher_background\" />\n    <foreground android:drawable=\"@drawable/ic_launcher_foreground\" />\n</adaptive-icon>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "ab147b2c15ec97b8"
+                    }
+                },
+                {
+                    "ruleId": "UseKtx",
+                    "ruleIndex": 7,
+                    "message": {
+                        "text": "Use the KTX extension function String.toUri instead?",
+                        "markdown": "Use the KTX extension function `String.toUri` instead?"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/dev/yaelrdf/claudewidget/data/ClaudeApi.kt"
+                                },
+                                "region": {
+                                    "startLine": 54,
+                                    "startColumn": 19,
+                                    "endLine": 54,
+                                    "endColumn": 43,
+                                    "charOffset": 2226,
+                                    "charLength": 24,
+                                    "snippet": {
+                                        "text": "Uri.parse(AUTHORIZE_URL)"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 52,
+                                    "endLine": 57,
+                                    "snippet": {
+                                        "text": "        val state = randomUrlSafe(32)\n        val challenge = base64Url(MessageDigest.getInstance(\"SHA-256\").digest(verifier.toByteArray()))\n        val url = Uri.parse(AUTHORIZE_URL).buildUpon()\n            .appendQueryParameter(\"code\", \"true\")\n            .appendQueryParameter(\"client_id\", CLIENT_ID)\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "fixes": [
+                        {
+                            "description": {
+                                "text": "Replace with the toUri extension function"
+                            },
+                            "artifactChanges": [
+                                {
+                                    "artifactLocation": {
+                                        "uriBaseId": "%SRCROOT%",
+                                        "uri": "app/src/main/java/dev/yaelrdf/claudewidget/data/ClaudeApi.kt"
+                                    },
+                                    "replacements": [
+                                        {
+                                            "deletedRegion": {
+                                                "startLine": 54,
+                                                "startColumn": 19,
+                                                "charOffset": 2226,
+                                                "endLine": 54,
+                                                "endColumn": 43,
+                                                "charLength": 24
+                                            },
+                                            "insertedContent": {
+                                                "text": "AUTHORIZE_URL.toUri()\n"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "58c3fc6a1315d37f"
+                    }
+                },
+                {
+                    "ruleId": "ConstantLocale",
+                    "ruleIndex": 1,
+                    "message": {
+                        "text": "Assigning Locale.getDefault() to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running",
+                        "markdown": "Assigning `Locale.getDefault()` to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/java/dev/yaelrdf/claudewidget/format/Format.kt"
+                                },
+                                "region": {
+                                    "startLine": 10,
+                                    "startColumn": 68,
+                                    "endLine": 10,
+                                    "endColumn": 87,
+                                    "charOffset": 266,
+                                    "charLength": 19,
+                                    "snippet": {
+                                        "text": "Locale.getDefault()"
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 8,
+                                    "endLine": 13,
+                                    "snippet": {
+                                        "text": "\nobject Format {\n    private val dayTime = DateTimeFormatter.ofPattern(\"EEE HH:mm\", Locale.getDefault())\n\n    /** \"2h 13m\" when the reset is within a day, otherwise \"Thu 09:00\" in local time. */\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "1064264ec682bc6a"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"Claude…\", should use @string resource",
+                        "markdown": "Hardcoded string \"Claude…\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_loading.xml"
+                                },
+                                "region": {
+                                    "startLine": 7,
+                                    "startColumn": 5,
+                                    "endLine": 7,
+                                    "endColumn": 27,
+                                    "charOffset": 267,
+                                    "charLength": 22,
+                                    "snippet": {
+                                        "text": "android:text=\"Claude…\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 5,
+                                    "endLine": 10,
+                                    "snippet": {
+                                        "text": "    android:background=\"@drawable/widget_bg\"\n    android:gravity=\"center\"\n    android:text=\"Claude…\"\n    android:textColor=\"#EDEAE3\"\n    android:textSize=\"12sp\" />\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "9cce80c7823779c5"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"Session\", should use @string resource",
+                        "markdown": "Hardcoded string \"Session\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 16,
+                                    "startColumn": 13,
+                                    "endLine": 16,
+                                    "endColumn": 35,
+                                    "charOffset": 602,
+                                    "charLength": 22,
+                                    "snippet": {
+                                        "text": "android:text=\"Session\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 14,
+                                    "endLine": 19,
+                                    "snippet": {
+                                        "text": "\n        <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n            android:text=\"Session\" android:textColor=\"#EDEAE3\" android:textSize=\"9sp\" />\n        <LinearLayout android:layout_width=\"match_parent\" android:layout_height=\"wrap_content\"\n            android:gravity=\"center_vertical\" android:orientation=\"horizontal\">\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "a5ec00708389a144"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"42%\", should use @string resource",
+                        "markdown": "Hardcoded string \"42%\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 23,
+                                    "startColumn": 39,
+                                    "endLine": 23,
+                                    "endColumn": 57,
+                                    "charOffset": 1235,
+                                    "charLength": 18,
+                                    "snippet": {
+                                        "text": "android:text=\"42%\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 21,
+                                    "endLine": 26,
+                                    "snippet": {
+                                        "text": "                android:progress=\"42\" android:progressTint=\"#4CB782\" />\n            <TextView android:layout_width=\"30dp\" android:layout_height=\"wrap_content\"\n                android:gravity=\"end\" android:text=\"42%\" android:textColor=\"#EDEAE3\"\n                android:textSize=\"9sp\" android:textStyle=\"bold\" />\n        </LinearLayout>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "b623b6be927674d6"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"2h 13m\", should use @string resource",
+                        "markdown": "Hardcoded string \"2h 13m\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 27,
+                                    "startColumn": 13,
+                                    "endLine": 27,
+                                    "endColumn": 34,
+                                    "charOffset": 1476,
+                                    "charLength": 21,
+                                    "snippet": {
+                                        "text": "android:text=\"2h 13m\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 25,
+                                    "endLine": 30,
+                                    "snippet": {
+                                        "text": "        </LinearLayout>\n        <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n            android:text=\"2h 13m\" android:textColor=\"#A19D94\" android:textSize=\"8sp\" />\n\n        <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "bbe6b33c9d5c8d83"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"Weekly\", should use @string resource",
+                        "markdown": "Hardcoded string \"Weekly\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 31,
+                                    "startColumn": 13,
+                                    "endLine": 31,
+                                    "endColumn": 34,
+                                    "charOffset": 1699,
+                                    "charLength": 21,
+                                    "snippet": {
+                                        "text": "android:text=\"Weekly\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 29,
+                                    "endLine": 34,
+                                    "snippet": {
+                                        "text": "        <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n            android:layout_marginTop=\"2dp\"\n            android:text=\"Weekly\" android:textColor=\"#EDEAE3\" android:textSize=\"9sp\" />\n        <LinearLayout android:layout_width=\"match_parent\" android:layout_height=\"wrap_content\"\n            android:gravity=\"center_vertical\" android:orientation=\"horizontal\">\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "19a308ac3a14e44c"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"18%\", should use @string resource",
+                        "markdown": "Hardcoded string \"18%\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 38,
+                                    "startColumn": 39,
+                                    "endLine": 38,
+                                    "endColumn": 57,
+                                    "charOffset": 2331,
+                                    "charLength": 18,
+                                    "snippet": {
+                                        "text": "android:text=\"18%\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 36,
+                                    "endLine": 41,
+                                    "snippet": {
+                                        "text": "                android:progress=\"18\" android:progressTint=\"#4CB782\" />\n            <TextView android:layout_width=\"30dp\" android:layout_height=\"wrap_content\"\n                android:gravity=\"end\" android:text=\"18%\" android:textColor=\"#EDEAE3\"\n                android:textSize=\"9sp\" android:textStyle=\"bold\" />\n        </LinearLayout>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "a61d9b97eb605049"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"Thu 09:00\", should use @string resource",
+                        "markdown": "Hardcoded string \"Thu 09:00\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 42,
+                                    "startColumn": 13,
+                                    "endLine": 42,
+                                    "endColumn": 37,
+                                    "charOffset": 2572,
+                                    "charLength": 24,
+                                    "snippet": {
+                                        "text": "android:text=\"Thu 09:00\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 40,
+                                    "endLine": 45,
+                                    "snippet": {
+                                        "text": "        </LinearLayout>\n        <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n            android:text=\"Thu 09:00\" android:textColor=\"#A19D94\" android:textSize=\"8sp\" />\n    </LinearLayout>\n\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "98756a56ad5a23a9"
+                    }
+                },
+                {
+                    "ruleId": "HardcodedText",
+                    "ruleIndex": 3,
+                    "message": {
+                        "text": "Hardcoded string \"4m ↻\", should use @string resource",
+                        "markdown": "Hardcoded string \"4m ↻\", should use `@string` resource"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uriBaseId": "%SRCROOT%",
+                                    "uri": "app/src/main/res/layout/widget_preview.xml"
+                                },
+                                "region": {
+                                    "startLine": 47,
+                                    "startColumn": 9,
+                                    "endLine": 47,
+                                    "endColumn": 28,
+                                    "charOffset": 2811,
+                                    "charLength": 19,
+                                    "snippet": {
+                                        "text": "android:text=\"4m ↻\""
+                                    }
+                                },
+                                "contextRegion": {
+                                    "startLine": 45,
+                                    "endLine": 49,
+                                    "snippet": {
+                                        "text": "    <TextView android:layout_width=\"wrap_content\" android:layout_height=\"wrap_content\"\n        android:layout_gravity=\"bottom|end\"\n        android:text=\"4m ↻\" android:textColor=\"#EDEAE3\" android:textSize=\"9sp\" />\n</FrameLayout>\n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "partialFingerprints": {
+                        "sourceContext/v1": "1e0e82aed294fbc6"
+                    }
+                }
+            ]
+        }
+    ]
+}

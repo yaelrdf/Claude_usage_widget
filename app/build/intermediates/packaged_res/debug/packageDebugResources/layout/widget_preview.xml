@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Session" android:textColor="#EDEAE3" android:textSize="9sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <ProgressBar style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1"
+                android:progress="42" android:progressTint="#4CB782" />
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:gravity="end" android:text="42%" android:textColor="#EDEAE3"
+                android:textSize="9sp" android:textStyle="bold" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="2h 13m" android:textColor="#A19D94" android:textSize="8sp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Weekly" android:textColor="#EDEAE3" android:textSize="9sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <ProgressBar style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1"
+                android:progress="18" android:progressTint="#4CB782" />
+            <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                android:gravity="end" android:text="18%" android:textColor="#EDEAE3"
+                android:textSize="9sp" android:textStyle="bold" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Thu 09:00" android:textColor="#A19D94" android:textSize="8sp" />
+    </LinearLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="4m ↻" android:textColor="#EDEAE3" android:textSize="9sp" />
+</FrameLayout>

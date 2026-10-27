@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.4.1" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of Gradle than 9.8.1 is available: 9.8.2">
+        <fix-replace
+            description="Update to 9.8.2"
+            oldString="9.8.1"
+            replacement="9.8.2"
+            priority="0"/>
+        <location
+            file="$HOME/Claude-widget/gradle/wrapper/gradle-wrapper.properties"
+            line="3"
+            column="17"
+            startOffset="81"
+            endLine="3"
+            endColumn="80"
+            endOffset="144"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.11.0 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.12.0"
+            priority="0"/>
+        <location
+            file="$HOME/Claude-widget/gradle/libs.versions.toml"
+            line="11"
+            column="21"
+            startOffset="205"
+            endLine="11"
+            endColumn="29"
+            endOffset="213"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="26"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="269"/>
+    </incident>
+
+    <incident
+        id="UseKtx"
+        severity="warning"
+        message="Use the KTX extension function `String.toUri` instead?">
+        <fix-replace
+            description="Replace with the toUri extension function"
+            family="Replace with the toUri extension function"
+            robot="true"
+            independent="true"
+            oldString="Uri.parse(AUTHORIZE_URL)"
+            replacement="AUTHORIZE_URL.toUri()"
+            reformat="value"
+            imports="androidx.core.net.toUri"
+            priority="0">
+            <range
+                file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/dev/yaelrdf/claudewidget/data/ClaudeApi.kt"
+                startOffset="2226"
+                endOffset="2250"/>
+        </fix-replace>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/dev/yaelrdf/claudewidget/data/ClaudeApi.kt"
+            line="54"
+            column="19"
+            startOffset="2226"
+            endLine="54"
+            endColumn="43"
+            endOffset="2250"/>
+    </incident>
+
+    <incident
+        id="ConstantLocale"
+        severity="warning"
+        message="Assigning `Locale.getDefault()` to a final static field is suspicious; this code will not work correctly if the user changes locale while the app is running">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/dev/yaelrdf/claudewidget/format/Format.kt"
+            line="10"
+            column="68"
+            startOffset="266"
+            endLine="10"
+            endColumn="87"
+            endOffset="285"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Claude…&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_loading.xml"
+            line="7"
+            column="5"
+            startOffset="267"
+            endLine="7"
+            endColumn="27"
+            endOffset="289"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Session&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="16"
+            column="13"
+            startOffset="602"
+            endLine="16"
+            endColumn="35"
+            endOffset="624"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;42%&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="23"
+            column="39"
+            startOffset="1235"
+            endLine="23"
+            endColumn="57"
+            endOffset="1253"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;2h 13m&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="27"
+            column="13"
+            startOffset="1476"
+            endLine="27"
+            endColumn="34"
+            endOffset="1497"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Weekly&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="31"
+            column="13"
+            startOffset="1699"
+            endLine="31"
+            endColumn="34"
+            endOffset="1720"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;18%&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="38"
+            column="39"
+            startOffset="2331"
+            endLine="38"
+            endColumn="57"
+            endOffset="2349"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Thu 09:00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="42"
+            column="13"
+            startOffset="2572"
+            endLine="42"
+            endColumn="37"
+            endOffset="2596"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;4m ↻&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/widget_preview.xml"
+            line="47"
+            column="9"
+            startOffset="2811"
+            endLine="47"
+            endColumn="28"
+            endOffset="2830"/>
+    </incident>
+
+</incidents>
